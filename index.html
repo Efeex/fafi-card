@@ -22,18 +22,33 @@
                 <label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control form-control-lg" id="nome" placeholder="Inserisci qui il nome" required>
+                    <div class="invalid-feedback">
+                        Inserisci il nome del cliente.
+                    </div>
+                    <div class="valid-feedback">
+                        Bel nome!
+                    </div>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="cognome" class="col-sm-2 col-form-label col-form-label-lg">Cognome</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control form-control-lg" id="cognome" placeholder="Inserisci qui il cognome" required>
+                    <div class="invalid-feedback">
+                        Inserisci il cognome del cliente.
+                    </div>
+                    <div class="valid-feedback">
+                        Un gran cognome!
+                    </div>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="date" class="col-sm-2 col-form-label col-form-label-lg">Compleanno</label>
+                <label for="date" class="col-sm-2 col-form-label col-form-label-lg">Data di nascita</label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-lg" id="date">
+                    <input type="date" class="form-control form-control-lg" id="date" required>
+                    <div class="invalid-feedback ml-2">
+                        Inserisci la data di nascita.
+                    </div>
                 </div>
             </div>
             <div class="form-group row">
@@ -46,6 +61,12 @@
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioF" value="option2" required>
                         <label class="form-check-label" for="femminaRadio">Femmina</label>
+                        <div class="invalid-feedback ml-2">
+                            Scegli un sesso.
+                        </div>
+                        <div class="valid-feedback ml-2">
+                            Ottimo sesso.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,6 +74,9 @@
                 <label for="email" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
                 <div class="col-sm-10">
                     <input type="email" class="form-control form-control-lg" id="email" placeholder="Inserisci qui il l'email">
+                    <div class="valid-feedback ml-2">
+                        È un campo opzionale, non tutti la hanno.
+                    </div>
                 </div>
             </div>
             <div class="row">
