@@ -8,10 +8,14 @@
 
 
        $name="";
+       $cognome="";
+       $sesso="";
       if(isset($_POST['submit']))
           {
               $name = $_POST['nome'];
-              $conn->query("insert into dati(nome) values('$name')");
+              $cognome = $_POST['cognome'];
+              $name = $_POST['radio'];
+              $conn->query("insert into dati(nome, cognome, sesso) values('$name', '$cognome', '$sesso')");
           if(!$conn)
           { echo mysqli_error(); }
       else
