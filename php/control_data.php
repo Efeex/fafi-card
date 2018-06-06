@@ -1,23 +1,36 @@
 <?php
-       $servername = "localhost";
-       $username = "root";
-       $password = "";
-       $dbname = "test";
-       $conn = new mysqli($servername, $username, $password, $dbname) or die("unable to connect to database");
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "test";
+  $conn = new mysqli($servername, $username, $password, $dbname) or die("unable to connect to database");
 
 
 
-       $name="";
-      if(isset($_POST['submit']))
-          {
-              $name = $_POST['nome'];
-              $conn->query("insert into dati(nome) values('$name')");
-          if(!$conn)
-          { echo mysqli_error(); }
-      else
-      {
-          echo "Successfully Inserted <br />";
 
-      }
-           }
+  $nome ='';
+  $cognome ='';
+  $data ='';
+  $email ='';
+
+
+  if(isset($_POST['submit'])){
+    $nome = $_POST['nome'];
+    $cognome = $_POST['cognome'];
+    $gender = $_POST['gender'];
+    if (isset($gender) && $gender=="femmina");
+    elseif (isset($gender) && $gender=="maschio");
+    $data = $_POST['date'];
+    $email = $_POST['email'];
+    
+    $conn->query("insert into dati (nome, cognome, data, sesso, email) values('$nome', '$cognome', '$data', '$gender', '$email')");
+    printf("Errormessage: %s\n", $conn->error);
+    if(!$conn)
+    { echo mysqli_error(); }
+    else
+    {
+      echo "Successfully Inserted <br />";
+
+    }
+  }
 ?>
