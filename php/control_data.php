@@ -1,12 +1,6 @@
 <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "test";
-  $conn = new mysqli($servername, $username, $password, $dbname) or die("unable to connect to database");
 
-
-
+  include ("connect.php");
 
   $nome ='';
   $cognome ='';
@@ -22,7 +16,7 @@
     elseif (isset($gender) && $gender=="maschio");
     $data = $_POST['date'];
     $email = $_POST['email'];
-    
+
     $conn->query("insert into dati (nome, cognome, data, sesso, email) values('$nome', '$cognome', '$data', '$gender', '$email')");
     printf("Errormessage: %s\n", $conn->error);
     if(!$conn)
