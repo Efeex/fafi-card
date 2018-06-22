@@ -24,7 +24,7 @@
     else
     {
       echo "Successfully Inserted <br />";
-
+      header("Location: read.php");
     }
   }
 ?>

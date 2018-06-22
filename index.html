@@ -14,81 +14,11 @@
 </head>
 <body>
 
-<div class="row">
-    <div class="container">
-        <h1 class="my-5">UID: </h1>
-        <h1 id="UID"></h1>
-        <form class="needs-validation" name="Dati_Utente" action="php/control_data.php" method="post" enctype="multipart/form-data" novalidate>
-            <div class="form-group row">
-                <label for="nome" class="col-sm-2 col-form-label col-form-label-lg">Nome</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-lg" name="nome" placeholder="Inserisci qui il nome" required>
-                    <div class="invalid-feedback">
-                        Inserisci il nome del cliente.
-                    </div>
-                    <div class="valid-feedback">
-                        Bel nome!
-                    </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="cognome" class="col-sm-2 col-form-label col-form-label-lg">Cognome</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control form-control-lg" name="cognome" placeholder="Inserisci qui il cognome" required>
-                    <div class="invalid-feedback">
-                        Inserisci il cognome del cliente.
-                    </div>
-                    <div class="valid-feedback">
-                        Un gran cognome!
-                    </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="date" class="col-sm-2 col-form-label col-form-label-lg">Nascita</label>
-                <div class="col-sm-10">
-                    <input type="date" class="form-control form-control-lg" name="date" required>
-                    <div class="invalid-feedback ml-2">
-                        Inserisci la data di nascita.
-                    </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="inlineRadioM" class="col-sm-2 col-form-label col-form-label-lg">Sesso</label>
-                <div class="col-sm-10 py-2">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" value="maschio" required>
-                        <label class="form-check-label" for="maschioRadio">Maschio</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="gender" value="femmina" required>
-                        <label class="form-check-label" for="femminaRadio">Femmina</label>
-                        <div class="invalid-feedback ml-2">
-                            Scegli un sesso.
-                        </div>
-                        <div class="valid-feedback ml-2">
-                            Ottimo sesso.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="email" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control form-control-lg" name="email" placeholder="Inserisci qui il l'email">
-                    <div class="valid-feedback ml-2">
-                        È un campo opzionale, non tutti la hanno.
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="container">
-                    <button type="submit" name="submit" class="btn btn-lg btn-block btn-outline-success">Registra</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
+  <h1 id="demo">
+
+  </h1>
 
 
+  <script src="js/php_call.js"></script>
 </body>
 </html>
