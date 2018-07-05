@@ -19,7 +19,7 @@
     $data = $_POST['date'];
     $email = $_POST['email'];
 
-    $conn->query("insert into dati (uid, nome, cognome, data, sesso, email) values('$id', '$nome', '$cognome', '$data', '$gender', '$email')");
+    $conn->query("update dati set uid='$id', nome='$nome', cognome='$cognome', data='$data', sesso='$gender', email='$email' where uid = '$id'");
     printf("Errormessage: %s\n", $conn->error);
     if(!$conn)
     { echo mysqli_error(); }

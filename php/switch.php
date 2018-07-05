@@ -32,6 +32,7 @@
             //header("Location: read.php");
           } else {
             echo('nono');
+            $bool = FALSE;
             //header("Location: ../form.html");
           }
       }
@@ -39,16 +40,15 @@
         echo "0 results";
     }
 
+    # define the variables array
+    $data = ['uid_log' => $uid ];
+
+    # create the query string
+    $query_string = http_build_query($data);
+
     if($bool == TRUE){
-
-      # define the variables array
-      $data = ['uid_log' => $uid ];
-
-      # create the query string
-      $query_string = http_build_query($data);
-
       header("Location: read.php" . (FALSE === empty($query_string) ? '?'.$query_string:''));
     } else{
-      header("Location: ../form.html");
+      header("Location: ../form.php" . (FALSE === empty($query_string) ? '?'.$query_string:''));
     }
 ?>

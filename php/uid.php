@@ -14,9 +14,11 @@
     $call_log = $conn->query($log);
     while ($row = $call_log->fetch_assoc()){
       $uid_log = $row['uid'];
+      $time_log = $row['time'];
     };
 
     $myObj->log_uid = $uid_log;
+    $myObj->log_time = $time_log;
 
 
     header('Access-Control-Allow-Origin: local/host/fafi-card');
