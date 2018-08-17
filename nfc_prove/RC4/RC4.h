@@ -1,0 +1,1 @@
+int RC4(unsigned char *key, size_t keylength, unsigned char *plaintext, size_t length, unsigned char *ciphertext);
