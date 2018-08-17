@@ -2,10 +2,12 @@
 
 //La carta da passare(dovresti avere come me una Mifare Classic 1K bianca) NON deve essere formattata come NDEF
 //La formattazione per i tag NDEF non ci serve assolutamente a nulla. Non so se questo programma funzioni se la carta è formattata
-//per le tag NDEF, potrebbe come non potrebbe. Teoricamente, dovrebbe farlo almeno che la key di autenticazione non è stata alterata
-//durante la formattazione
+//per le tag NDEF, potrebbe come non potrebbe, non ho provato
+//Nel caso in cui non vada, resetta la tua Miflare allo stato originale con :
+//https://github.com/don/NDEF/blob/master/examples/CleanTag/CleanTag.ino
 //Teoricamente, potremmo cambiare le key di autenticazione standard e utilizzare la protezione già inclusa nelle Mifare
-//Praticamente non sono riuscito a trovare un esempio di come cambiare le key usando il modulo NFC, ed in più è un sistema che è stato già hackerato, per cui..
+//Praticamente non sono riuscito a trovare un esempio di come cambiare le key usando il modulo NFC, ed in più è un sistema che 
+//è stato già hackerato, per cui..
 
 #include <Wire.h>
 #include <PN532_I2C.h>
