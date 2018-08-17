@@ -1,9 +1,9 @@
-//Installare la libreria RC4 che ho creato prima
+//Installare la libreria RC4 nella dir
 
-//La carta da passare(dovresti avere come me una Mifare Classic 1K bianca) NON deve essere formattata come NDEF
-//La formattazione per i tag NDEF non ci serve assolutamente a nulla. Non so se questo programma funzioni se la carta è formattata
-//per le tag NDEF, potrebbe come non potrebbe, non ho provato
-//Nel caso in cui non vada, resetta la tua Miflare allo stato originale con :
+//La carta da passare(dovresti avere come me una Mifare Classic 1K bianca) NON deve essere formattata come NDEF,
+//altrimenti questo sketch non funzionerà
+//La formattazione per i tag NDEF non ci serve assolutamente a nulla. 
+//Se la tua mifare è già formattata per NDEF, resettala con:
 //https://github.com/don/NDEF/blob/master/examples/CleanTag/CleanTag.ino
 //Teoricamente, potremmo cambiare le key di autenticazione standard e utilizzare la protezione già inclusa nelle Mifare
 //Praticamente non sono riuscito a trovare un esempio di come cambiare le key usando il modulo NFC, ed in più è un sistema che 
@@ -17,7 +17,7 @@
 //Definizioni globali
 unsigned char FafiRC4Key[] = {0x40, 0xF4, 0x29, 0x92, 0xA2, 0xDB, 0xAA, 0xE1, 0x87, 0x91, 0xA9, 0x11, 0x94, 0x10, 0x5A, 0x5C};
 //16 bytes, la lunghezza non è statica e può essere cambiata
-//Quando lanceremo il progetto, userò l'AES-256
+
 
 PN532_I2C pn532i2c(Wire);
 PN532 nfc(pn532i2c);
